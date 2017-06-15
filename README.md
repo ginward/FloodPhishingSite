@@ -7,7 +7,7 @@ Stop Phishing Website!
 
 Warning: Recommend use with a proxy. 
 
-How to use it? 
+# How to use it? 
 
 Inspect the phishing website to find out the form elements (email, password). Then change the data structure in the attack function. Also update the url with the phsihing website's url. 
 
